@@ -1,0 +1,272 @@
+@charset "utf-8";
+/* CSS Document */
+.icon_add,.icon_lead-in,.icon_back,.icon_sort,.icon_down,.icon_type{
+	float:right;
+	display:inline-block;
+	height:27px;
+	line-height:27px;
+	margin-left:5px;
+	padding-left:25px;
+	cursor:pointer}
+.icon_add{        /*注册、添加*/
+	background:url(../images/icon/icon_l_c.png) no-repeat;}
+.icon_lead-in{    /*导入*/
+	background:url(../images/icon/icon_l_a.png) no-repeat;}	
+.icon_back{       /*返回*/	
+	background:url(../images/icon/icon_l_e.png) no-repeat}	
+.icon_sort{
+	background:url(../images/icon/icon_l_d.png) no-repeat;}	
+.icon_down{
+	background:url(../images/icon/icon_l_b.png) no-repeat}	
+.icon_type{       /*类型*/
+	background:url(../images/icon/icon_l_f.png) no-repeat}
+			
+.icon_r{
+	display:inline-block;
+	height:27px;
+	line-height:27px;
+	padding-right:15px;
+	font-style:normal;
+	color:#016798;
+	cursor:pointer;
+	background:url(../images/icon/icon_r.png) no-repeat;
+	background-position:100% 0;}
+.ico_del{
+	width:16px;
+	height:16px;
+	display:inline-block;
+	cursor:pointer;
+	vertical-align:middle;
+	background:url(../images/icon/ico_del.png) no-repeat;
+	background-position:50% 1px;}	
+	
+.ico_lock,.ico_unlock{
+	width:19px;
+	height:18px;
+	display:inline-block;
+	cursor:pointer;
+	vertical-align:middle;}
+.ico_unlock	{
+	background:url(../images/icon/ico_lock.png) no-repeat;}
+.ico_lock	{
+	background:url(../images/icon/ico_unlock.png) no-repeat;}	
+.ico_permission{
+	width:18px;
+	height:18px;
+	display:inline-block;
+	cursor:pointer;
+	vertical-align:middle;
+	background:url(../images/icon/ico_permission.png) no-repeat;}	
+.ico_pic{
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/icon/ico_pic.png) no-repeat;
+	vertical-align:middle}	
+.ico_viedo_audio{
+	width:12px;
+	height:12px;
+	display:inline-block;
+	background:url(../images/icon/ico_viedo.png) no-repeat;
+	background-position:50% 50%;
+	vertical-align:middle}	
+.ico_viedo{
+	display:block;
+	width:48px;
+	height:48px;
+	background:url(../images/icon/viedo.png) no-repeat;
+	margin:4px auto;}	
+.ico_audio{
+	display:block;
+	width:48px;
+	height:48px;
+	background:url(../images/icon/audio.png) no-repeat;
+	margin:4px auto;}	
+	
+.ico_edit{
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/icon/iconEdit.png) no-repeat;
+	vertical-align:middle}	
+	
+	
+.ico_amend{
+	width:12px;
+	height:13px;
+	display:inline-block;
+	background:url(../images/icon/ico_amend.png) no-repeat;
+	vertical-align:middle;
+	cursor:pointer;}	
+	
+.ico_del2{
+	width:9px;
+	height:9px;
+	display:inline-block;
+	background:url(../images/icon/ico_del2.png) no-repeat;
+	vertical-align:middle;
+	cursor:pointer;}
+	
+	
+.ico_unfold,.ico_fold{
+	width:9px;
+	height:9px;
+	display:inline-block;
+	vertical-align:middle;}	
+.ico_unfold{
+	background:url(../images/icon/ico_fold.png) no-repeat;}	
+.ico_fold{
+	background:url(../images/icon/ico_unfold.png) no-repeat;}	
+	
+	
+.ico_ac_add,.ico_ac_cut{
+	width:11px;
+	height:11px;
+	display:inline-block;
+	vertical-align:middle;
+	cursor:pointer;
+	background:url(../images/icon/ico_add_cut.png) no-repeat;}	
+	
+.ico_ac_add{
+	background-position:0 0;}	
+.ico_ac_cut{
+	background-position:-16px 0}	
+.ico_add{
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/icon/icon_add.png) no-repeat;
+	vertical-align:middle;
+	cursor:pointer;}
+	
+.ico_tjadd{
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(../images/icon/ico_tjadd.png) no-repeat;
+	vertical-align:middle;
+	cursor:pointer;}
+.ico_xt{
+	width:9px;
+	height:11px;
+	display:inline-block;
+	background:url(../images/icon/ico_xt.png) no-repeat;
+	vertical-align:-1px;
+ 
+	cursor:pointer;}	
++html .ico_xt{
+	vertical-align:middle;}	
+.ico_recommend{/*推荐*/
+	width:17px;
+	height:17px;
+	display: inline-block;
+  	vertical-align: middle;
+  	background: url(../images/icon/po_icon.gif) no-repeat;
+	background-position: -177px -87px;}
+	
+.ico_top{
+	width:18px;
+	height:18px;
+	display:inline-block;
+	background:url(../images/icon/headtopic_2.gif) no-repeat;
+	vertical-align:middle;}	
+	
+.ico_del3{
+	width:14px;
+	height:14px;
+	display:inline-block;
+	vertical-align:middle;
+	background:url(../images/icon/ico_del_pen.png) no-repeat;
+	background-position:0 50%;
+	cursor:pointer}	
+.ico_pen{
+	width:14px;
+	height:14px;
+	display:inline-block;
+	vertical-align:middle;
+	background:url(../images/icon/ico_del_pen.png) no-repeat;
+	background-position:-22px 50%;
+	cursor:pointer}	
+	
+	
+		
+	
+.btn_gray {
+	display:inline-block;
+	padding:0px 10px;
+	height:22px;
+	line-height:22px;
+	cursor:pointer;
+	vertical-align:middle;
+	border-radius:2px;
+	border: 1px solid #888;color: #000000;color: #000000!important;background: #F3F3F3;
+	background: -moz-linear-gradient(top,#ffffff 0%,#ebebeb 90%,#F3F3F3 100%);
+	background: -webkit-linear-gradient(top,#ffffff 0%,#ebebeb 90%,#F3F3F3 100%);
+	background: -o-linear-gradient(top,#ffffff 0%,#ebebeb 90%,#F3F3F3 100%);
+	background: -ms-linear-gradient(top,#ffffff 0%,#ebebeb 90%,#F3F3F3 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff',endColorstr='#d7d7d7',GradientType=0 );
+	background: linear-gradient(top,#ffffff 0%,#ebebeb 90%,#F3F3F3 100%);}
+.btn_gray:hover{
+	border: 1px solid #48a2ea;
+	background: #e7f4fd;
+	background: -moz-linear-gradient(top,#e7f4fd 0%,#c8e8ff 100%);
+	background: -webkit-linear-gradient(top,#e7f4fd 0%,#c8e8ff 100%);
+	background: -o-linear-gradient(top,#e7f4fd 0%,#c8e8ff 100%);
+	background: -ms-linear-gradient(top,#e7f4fd 0%,#c8e8ff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7f4fd',endColorstr='#c8e8ff',GradientType=0 );
+	background: linear-gradient(top,#e7f4fd 0%,#c8e8ff 100%);}	
+	
+.ck_ch{
+	border:1px solid #9fbcda;
+	height:22px;
+	line-height:22px;
+	width:175px;
+	text-indent:.5em;
+	cursor:pointer;
+	background: -moz-linear-gradient(top,#ffffff 0%,#f3f8fe 100%);
+	background: -webkit-linear-gradient(top,#ffffff 0%,#f3f8fe 100%);
+	background: -o-linear-gradient(top,#ffffff 0%,#f3f8fe 100%);
+	background: -ms-linear-gradient(top,#ffffff 0%,#f3f8fe 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff',endColorstr='#f3f8fe',GradientType=0 );
+	background: linear-gradient(top,#ffffff 0%,#f3f8fe 100%);}
+	
+.btn_center{
+	height:27px;
+	padding:2px 0px;
+	text-align:center;}	
+.btn_bgcol{
+	background:#c1d9f3;
+	height:32px;
+	line-height:32px;}
+.btn_left{
+	height:27px;
+	padding:3px 0px;
+	background:#eff3f6;}	
+	
+.btn_left_bcol{
+	background:#c1d9f3;
+	padding:6px 0px 4px 0px}
+.btnL{
+	display:inline-block;
+	height:27px;
+	line-height:27px;
+	margin:0px;
+	padding:0px;
+	cursor:pointer;
+	background:url(../images/icon/btnl.png) no-repeat;}	
+.btnL .btnR{
+	display:inline-block;
+	height:27px;
+	line-height:27px;
+	background:url(../images/icon/btnr.png) no-repeat;
+	background-position:100% 0;
+	padding:0px 15px;
+	text-align:center;
+	font-style:normal;
+	color:#fff;
+	text-shadow:1px 1px #000}
+	
+
+	
+	
+	

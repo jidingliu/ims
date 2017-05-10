@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.briup.cms.dao.IBackDao">
+	<!-- 添加栏目 -->
+	<insert id="addCategory" parameterType="com.briup.cms.bean.Category">
+	<selectKey keyColumn="id" keyProperty="id" order="BEFORE" resultType="long">
+		select cms_category.nextval from dual
+	</selectKey>
+		insert into tbl_category
+		values(#{id},#{code},#{name})
+	</insert>
+	
+	<!-- 查看所有栏目 -->
+	<select id="findAllCategory" resultType="com.briup.cms.bean.Category">
+		select * from tbl_category
+	</select>
+	
+	<!-- 删除栏目 -->
+	<delete id="delCategoryById" parameterType="long">
+		delete from tbl_category where id = #{id}
+	</delete>
+	
+	<!-- id查找栏目 -->
+	<select id="selectCategoryById" parameterType="long" resultType="com.briup.cms.bean.Category">
+		select * from tbl_category where id = #{id}
+	</select>
+	<!-- name查找栏目 -->
+	<select id="selectCategoryByName" parameterType="String" resultType="com.briup.cms.bean.Category">
+		select * from tbl_category where name = #{name}
+	</select>
+	<!-- code查找栏目 -->
+	<select id="selectCategoryByCode" parameterType="Integer" resultType="com.briup.cms.bean.Category">
+		select * from tbl_category where code = #{code}
+	</select>
+	<!-- 更新栏目信息 -->
+	<update id="updateCategory" parameterType="com.briup.cms.bean.Category">
+		update tbl_category set code=#{code},name = #{name} where id = #{id} 
+	</update>
+	
+	<!-- 添加文章 -->
+	<insert id="addArticle" parameterType="com.briup.cms.bean.Article">
+	<selectKey keyColumn="id" keyProperty="id" order="BEFORE" resultType="long">
+		select cms_article.nextval from dual
+	</selectKey>
+		insert into tbl_article
+		values(#{id},#{author},0,#{content},#{publisurDate},#{title},#{category.id})
+	</insert>
+	
+	<!-- 查找所有文章 -->
+	<select id="findAllArticle" resultMap="CategoryAndArticle">
+		select 
+	    a.id aid, a.author aauthor,a.title atitle,
+	    a.publisurDate apublisurDate,a.clickTimes aclick,
+	    c.name cname,c.id cid,c.code ccode
+	    from tbl_article a, tbl_category c
+	    where c.id(+)=a.c_id
+	</select>  
+	<resultMap type="com.briup.cms.bean.Article" id="CategoryAndArticle">
+		<id column="aid" property="id"/>
+		<result column="aauthor" property="author"/>
+		<result column="atitle" property="title"/>
+		<result column="apublisurDate" property="publisurDate"/>
+		<result column="aclick" property="clickTimes"/>
+		<result column="cname" property="category.name"/>
+		<result column="cid" property="category.id"/>
+		<result column="ccode" property="category.code"/>
+	</resultMap>
+	
+	<!-- 查找文章 -->
+	<select id="selectArticleById" parameterType="Long" resultMap="CategoryAndArticle2">
+	  select 
+      a.id aid, a.author aauthor,a.title atitle,a.content acontent,
+      a.publisurDate apublisurDate,a.clickTimes aclick,
+      c.name cname,c.id cid,c.code ccode
+      from tbl_article a, tbl_category c
+      where c.id(+)=a.c_id
+      and a.id=#{id}
+	</select>  
+	<resultMap type="com.briup.cms.bean.Article"  id="CategoryAndArticle2">
+		<id column="aid" property="id"/>
+		<result column="aauthor" property="author"/>
+		<result column="atitle" property="title"/>
+		<result column="apublisurDate" property="publisurDate"/>
+		<result column="acontent" property="content"/>
+		<result column="aclick" property="clickTimes"/>
+		<result column="cname" property="category.name"/>
+		<result column="cid" property="category.id"/>
+		<result column="ccode" property="category.code"/>
+	</resultMap>
+	<!-- 更新栏目信息 -->
+	<update id="updateArticle" parameterType="com.briup.cms.bean.Article">
+		update tbl_article set title=#{title},author=#{author},content=#{content},c_id=#{category.id}
+		where id = #{id} 
+	</update>
+	<!-- 根据id删除文章 -->
+	<!-- 删除栏目 -->
+	<delete id="delArticleById" parameterType="long">
+		delete from tbl_article where id = #{id}
+	</delete>
+</mapper>

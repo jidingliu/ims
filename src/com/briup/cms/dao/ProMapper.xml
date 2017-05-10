@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.briup.cms.dao.IProDao">
+	
+	<!-- 查看所有栏目 -->
+	<select id="proFindAllCategory" resultMap="CategoryAndArticle">
+		select 
+		c.name cname,c.id cid,c.code ccode,
+	    a.id aid, a.author aauthor,a.title atitle,
+	    a.publisurDate apublisurDate,a.clickTimes aclick
+	    from tbl_category c , tbl_article a
+	    where c.id=a.c_id(+)
+	</select>
+	<resultMap type="com.briup.cms.bean.Category" id="CategoryAndArticle">
+		<id column="cid" property="id"/>
+		<result column="cname" property="name"/>
+		<result column="ccode" property="code"/>
+		<collection property="articles" resultMap="findarticles"></collection>
+	</resultMap>
+	<resultMap type="com.briup.cms.bean.Article" id="findarticles">
+		<id column="aid" property="id"/>
+		<result column="aauthor" property="author"/>
+		<result column="atitle" property="title"/>
+		<result column="apublisurDate" property="publisurDate"/>
+		<result column="aclick" property="clickTimes"/>
+	</resultMap>
+	
+	<!-- 通过栏目id查找文章 -->
+	<select id="findArticleByCid" parameterType="long" resultType="com.briup.cms.bean.Article">
+		select * from tbl_article where c_id = #{id}
+	</select>
+	
+	<!-- 通过id查找栏目 -->
+	<select id="pselectCategoryById" parameterType="long" resultType="com.briup.cms.bean.Category">
+		select * from tbl_category where id = #{id}
+	</select>
+	
+	<!-- 通过id查找文章内容 -->
+	<select id="proSelectArticle" parameterType="long" resultType="com.briup.cms.bean.Article">
+		select * from tbl_article where id = #{id}
+	</select>
+	
+	<!-- 更新文章信息 --> 
+	<update id="updatecontent" parameterType="com.briup.cms.bean.Article">
+		update tbl_article set clickTimes=#{clickTimes} where id = #{id} 
+	</update>
+	
+	<!-- 通过文章id查找栏目 -->
+	<select id="selectCategoryIDByContentId" parameterType="long" resultType="long">
+		select c_id from tbl_article where id = #{id}
+	</select>
+</mapper>
